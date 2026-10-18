@@ -1,0 +1,103 @@
+    @keyframes shake-anim {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-6px); }
+      40% { transform: translateX(6px); }
+      60% { transform: translateX(-4px); }
+      80% { transform: translateX(4px); }
+    }
+    .shake-anim { animation: shake-anim 0.55s ease-in-out; }
+    @keyframes loginErrorBar {
+      from { width: 100%; }
+      to { width: 0%; }
+    }
+    @keyframes loginPanelSlideLeft {
+      from { opacity: 0; transform: translateX(-40px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes loginPanelFadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .login-stagger {
+      animation: loginPanelFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    .login-stagger:nth-child(1) { animation-delay: 0.35s; }
+    .login-stagger:nth-child(2) { animation-delay: 0.45s; }
+    .login-stagger:nth-child(3) { animation-delay: 0.55s; }
+    .login-stagger:nth-child(4) { animation-delay: 0.65s; }
+    .login-stagger:nth-child(5) { animation-delay: 0.75s; }
+    .login-stagger:nth-child(6) { animation-delay: 0.85s; }
+
+    /* Animasi elemen di panel biru */
+    @keyframes blobFloat {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50%      { transform: translate(36px, 28px) scale(1.15); }
+    }
+    @keyframes blobFloatAlt {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50%      { transform: translate(-30px, -22px) scale(1.1); }
+    }
+    .blob-float      { animation: blobFloat 14s ease-in-out infinite; }
+    .blob-float-alt  { animation: blobFloatAlt 18s ease-in-out infinite; }
+
+    @keyframes blobPanelFadeUp {
+      from { opacity: 0; transform: translateY(26px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .blob-stagger {
+      animation: blobPanelFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    .blob-stagger-1 { animation-delay: 0.45s; }
+    .blob-stagger-2 { animation-delay: 0.60s; }
+    .blob-stagger-3 { animation-delay: 0.75s; }
+    .blob-stagger-4 { animation-delay: 0.90s; }
+    .blob-stagger-5 { animation-delay: 1.05s; }
+
+    @keyframes mottoGlow {
+      0%, 100% { text-shadow: 0 0 12px rgba(255,255,255,0.10); }
+      50%      { text-shadow: 0 0 22px rgba(169,190,222,0.45); }
+    }
+
+    @keyframes gradientX {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .animate-gradient-x { animation: gradientX 5s ease infinite; }
+
+    /* Varian lambat untuk latar halaman login */
+    .login-bg-slow { animation-duration: 16s; animation-timing-function: ease-in-out; }
+
+    /* Animasi latar panel biru */
+    @keyframes panelGradient {
+      0%, 100% { background-position:   0% 30%; }
+      33%      { background-position: 100% 70%; }
+      66%      { background-position:  40% 100%; }
+    }
+    .blob-panel {
+      background-size: 260% 260% !important;
+      animation: panelGradient 20s ease-in-out infinite;
+    }
+
+    @keyframes dotsDrift {
+      from { background-position: 0px 0px; }
+      to   { background-position: 44px 44px; }
+    }
+    .dot-grid { animation: dotsDrift 24s linear infinite; }
+
+    /* Kilau cahaya menyapu panel secara berkala */
+    @keyframes panelShine {
+      0%, 55%  { transform: translateX(-120%) skewX(-18deg); }
+      85%, 100%{ transform: translateX(240%) skewX(-18deg); }
+    }
+    .blob-panel::after {
+      content: '';
+      position: absolute;
+      top: -10%;
+      left: 0;
+      width: 45%;
+      height: 120%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+      animation: panelShine 9s ease-in-out infinite;
+      pointer-events: none;
+    }

@@ -1,0 +1,122 @@
+.sikas-siswa-balance-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: #1b2a4a;
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px -4px rgba(27,42,74,0.3);
+}
+
+.sikas-siswa-balance-card strong {
+  display: block;
+  font-size: 24px;
+  margin: 4px 0;
+}
+
+.sikas-siswa-balance-card p {
+  font-size: 12px;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.sikas-siswa-balance-card span {
+  font-size: 10px;
+  opacity: 0.6;
+}
+
+.sikas-siswa-balance-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.1);
+  border-radius: 14px;
+  font-size: 20px;
+}
+
+.sikas-siswa-mobile-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  padding: 16px;
+}
+
+.sikas-siswa-card {
+  background: #fff;
+  border: 1px solid #eef0f6;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 8px -2px rgba(15,23,42,0.05);
+}
+
+.sikas-siswa-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.sikas-siswa-card-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #5b7aaa;
+  display: flex;
+  align-items: center;
+}
+
+.sikas-siswa-status {
+  font-size: 10px;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.sikas-siswa-status.paid {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.sikas-siswa-status.withdraw {
+  background: #fff1f2;
+  color: #e11d48;
+}
+
+.tabungan-siswa-card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sikas-siswa-card-amount {
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.sikas-siswa-card-amount.positive {
+  color: #059669;
+}
+
+.sikas-siswa-card-amount.negative {
+  color: #e11d48;
+}
+
+.tabungan-siswa-card-ket {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.tabungan-siswa-card-ket span {
+  font-size: 9px;
+  color: #8fa3c0;
+}
+
+.tabungan-siswa-card-ket b {
+  font-size: 11px;
+  color: #1b2a4a;
+}

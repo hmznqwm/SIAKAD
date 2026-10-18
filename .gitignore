@@ -1,0 +1,31 @@
+# Environment Variables & Secrets
+.env
+.env.*
+*.env
+*.env.*
+
+# Uploaded Files & User Content (keep folder structure)
+/uploads/*
+!/uploads/.htaccess
+
+# Node dependencies & caches
+/node_modules/
+package-lock.json
+npm-debug.log*
+
+# AI Assistant configs & Local Settings
+/.claude/
+settings.local.json
+*.local.json
+
+# System & OS junk
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.swp
+
+# IDEs
+.idea/
+.vscode/

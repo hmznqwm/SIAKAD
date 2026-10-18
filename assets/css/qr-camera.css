@@ -1,0 +1,3 @@
+    @keyframes qrScanAnim{0%{top:6px;opacity:1}100%{top:194px;opacity:.2}}
+    @keyframes qrSpinAnim{to{transform:rotate(360deg);}}
+    #qrCameraModal.active{display:flex!important;}

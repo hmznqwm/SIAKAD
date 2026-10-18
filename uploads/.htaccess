@@ -1,0 +1,33 @@
+# ============================================================
+# UPLOADS - Proteksi Folder Upload (Hardened)
+# Mencegah semua jenis eksekusi script dan web shell upload
+# ============================================================
+
+# Matikan engine PHP di folder ini sepenuhnya
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+
+# Blokir semua ekstensi berbahaya / executable
+<FilesMatch "\.(php|php3|php4|php5|php7|php8|phtml|phar|pl|py|jsp|asp|aspx|sh|cgi|htaccess|htpasswd|exe|bat|cmd|com|scr|vbs|js|mjs|ts|rb|lua)$">
+    Require all denied
+</FilesMatch>
+
+# Nonaktifkan eksekusi CGI di folder ini
+Options -ExecCGI -Indexes
+
+# Paksa semua file di-render sebagai tipe data mentah (bukan eksekusi)
+AddType text/plain .php .php3 .php4 .php5 .php7 .php8 .phtml .phar
+AddType text/plain .pl .py .cgi .sh .asp .aspx .jsp
+
+# Header keamanan tambahan untuk file upload
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set Content-Disposition "attachment"
+</IfModule>
